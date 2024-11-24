@@ -18,9 +18,9 @@ public partial class NewsletterDialogContentViewModel : ObservableObject, IDialo
 
     public NewsletterDialogContentViewModel()
     {
-        SignUpCommand = new RelayCommand(() => /*buisness logic can go here;*/ _tcs?.SetResult(new(NewsletterDialogResult.SignUp)));
-        DismissCommand = new RelayCommand(() => /*buisness logic can go here;*/ _tcs?.SetResult(new(NewsletterDialogResult.Dismiss)));
-        RemindLaterCommand = new RelayCommand(() => /*buisness logic can go here;*/ _tcs?.SetResult(new(NewsletterDialogResult.RemidLater)));
+        SignUpCommand = new RelayCommand(() => /*buisness logic can go here;*/ _tcs?.SetResult(new(NewsletterDialogResult.SignUp, UserEmail)));
+        DismissCommand = new RelayCommand(() => /*buisness logic can go here;*/ _tcs?.SetResult(new(NewsletterDialogResult.Dismiss, UserEmail)));
+        RemindLaterCommand = new RelayCommand(() => /*buisness logic can go here;*/ _tcs?.SetResult(new(NewsletterDialogResult.RemidLater, UserEmail)));
     }
 
     public void Initialize(NewsletterDialogInput parameters, TaskCompletionSource<NewsletterDialogOutput> tcs)

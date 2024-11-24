@@ -11,6 +11,8 @@
             <Label HorizontalContentAlignment="Center">Click to open newsletter dialog</Label>
             <Button Content="Open" Command="{Binding OpenDialogCommand}" Width="100"/>
             <Label HorizontalContentAlignment="Center" ContentStringFormat="{}Last newsletter dialog result is: {0}" Content="{Binding LastDialogResult}"/>
+            <Label HorizontalContentAlignment="Center" ContentStringFormat="{}Last newsletter email address is: {0}" Content="{Binding LastNewsletterEmailAddress}"/>
+
         </StackPanel>
 
         <views:DialogView/>

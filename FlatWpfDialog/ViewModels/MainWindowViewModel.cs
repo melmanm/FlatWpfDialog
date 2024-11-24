@@ -9,6 +9,8 @@ public partial class MainWindowViewModel : ObservableObject
     [ObservableProperty]
     private NewsletterDialogResult? _lastDialogResult;
 
+    [ObservableProperty]
+    private string? _lastNewsletterEmailAddress;
     public IAsyncRelayCommand OpenDialogCommand { get; }
 
     public MainWindowViewModel(DialogViewModel dialogViewModel, NewsletterDialogContentViewModel newsletterDialogViewModel)
@@ -17,6 +19,7 @@ public partial class MainWindowViewModel : ObservableObject
         {
             var dialogOutput = await dialogViewModel.ShowAsync(newsletterDialogViewModel, new("melmanm@melmanm.github.io"));
             LastDialogResult = dialogOutput.DialogResult;
+            LastNewsletterEmailAddress = dialogOutput.NewsletterEmailAddress;
         });
     }
 }
