@@ -16,7 +16,7 @@
     </UserControl.Resources>
     <StackPanel>
         <StackPanel>
-            <Label FontSize="14" FontWeight="Bold">Would you like ty sign up for newsletter?</Label>
+            <Label FontSize="14" FontWeight="Bold">Would you like to sign up for newsletter?</Label>
             <Label>newsletter will be sent to below email:</Label>
             <TextBox Text="{Binding UserEmail}" Margin="5"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
